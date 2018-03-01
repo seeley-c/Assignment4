@@ -45,15 +45,15 @@ public class pokemonClient
 	
 	// ***** create objects *****
 		
-            sceptile sceptile = new sceptile(Gender.Male, 45, "Sceptile", 
+            sceptile sceptile = new sceptile(Gender.Male, 45, "Joe", 
                     Rarity.Legendary, originalMoves.Scratch, Type.Fire, 
                     hiddenAbilities.Unburden, grassMoves.Spore, 
                     sceptileMoves.LeafStorm);
-            squirtle squirtle = new squirtle(Gender.Male, 56, "Squirtle", 
+            squirtle squirtle = new squirtle(Gender.Male, 56, "Bob", 
                     Rarity.Rare, originalMoves.Pound, Type.Water, 
                     hiddenAbilities.RainDish, waterMoves.WaterShuriken, 
                     squirtleMoves.HydroBlast);
-            Ninetails ninetails = new Ninetails(Gender.Male, 1234, "Ninetails", 
+            Ninetails ninetails = new Ninetails(Gender.Male, 1234, "Phil", 
                     Rarity.Legendary, originalMoves.Pound, Type.Fire, 
                     hiddenAbilities.Drought, fireMoves.InfernoOverdrive, 
                     ninetailsMoves.FlameCharge);
@@ -66,53 +66,49 @@ public class pokemonClient
 	// ***** Print Banner *****
 	
 		
-		
 	// ***** get input *****
 	
-		
+		//na
 	
 	// ***** processing *****
 	
-            
+            //na
 		
 	// ***** output *****
-	
-            joe.setGender(Gender.Female);
-            joe.setName("Josephine");
-            joe.setRarity(Rarity.Common);
             
-            System.out.println("Name: " + bob.getName());
-            System.out.println("Gender: " + bob.getGender());
-            System.out.println("Life Span: " + bob.getLifeSpan());
-            System.out.println("Rarity: " + bob.getRarity());
-            System.out.println("Pokemon Type: " + bob.getType());
-            System.out.println("Original Moves: " + bob.getOgMoves());
-            System.out.println("Grass Moves: " + bob.getgMoves());
-            System.out.println("Sceptile Moves: " + bob.getsceptileMoves());
-            System.out.println("Hidden Ability: " + bob.getHAbilities());
-            System.out.println("Pokemon ID: " + bob.getId() + "\n");
+            //output the pokemon objects
+            System.out.println(sceptile.toString());
+            System.out.println(squirtle.toString());
+            System.out.println(ninetails.toString());
             
-            System.out.println("Gender: " + joe.getGender());
-            System.out.println("Life Span: " + joe.getLifeSpan());
-            System.out.println("Name: " + joe.getName());
-            System.out.println("Rarity: " + joe.getRarity());
-            System.out.println("Pokemon Type: " + joe.getType());
-            System.out.println("Original Moves: " + joe.getOgMoves());
-            System.out.println("Water Moves: " + joe.getwMoves());
-            System.out.println("Squirtle Moves: " + joe.getsMoves());
-            System.out.println("Hidden Ability: " + joe.getHAbilities());
-            System.out.println("Pokemon ID: " + joe.getId() + "\n");
+            //change properties of sceptile object
+            sceptile.setGender(Gender.Female);
+            sceptile.setId(1003);
+            sceptile.setLifeSpan(101);
+            sceptile.setName("Josephine");
+            sceptile.setgMoves(grassMoves.Razorleaf);
+            sceptile.setsMoves(sceptileMoves.LeafBlade);
             
-            System.out.println("Gender: " + Sminem.getGender());
-            System.out.println("Life Span: " + Sminem.getLifeSpan());
-            System.out.println("Name: " + Sminem.getName());
-            System.out.println("Rarity: " + Sminem.getRarity());
-            System.out.println("Pokemon Type: " + Sminem.getType());
-            System.out.println("Original Moves: " + Sminem.getOgMoves());
-            System.out.println("Fire Moves: " + Sminem.getfMoves());
-            System.out.println("Ninetails Moves: " + Sminem.getntMoves());
-            System.out.println("Hidden Ability: " + Sminem.getHAbilities());
-            System.out.println("Pokemon ID: " + Sminem.getId() + "\n");
+            //change properties of squirtle object
+            squirtle.setOgMoves(originalMoves.Tackle);
+            squirtle.setId(1004);
+            squirtle.setName("Squirtle");
+            squirtle.setRarity(Rarity.Common);
+            squirtle.setwMoves(waterMoves.Vortex);
+            squirtle.setsqMoves(squirtleMoves.Shell);
+            
+            //change properties of ninetails object
+            ninetails.setHAbilities(hiddenAbilities.Unburden);
+            ninetails.setId(1005);
+            ninetails.setName("Ninetails");
+            ninetails.setType(Type.Grass);
+            ninetails.setfMoves(fireMoves.Scorch);
+            ninetails.setNtMoves(ninetailsMoves.Flamethrower);
+            
+            //output objects with updated properties
+            System.out.println(sceptile.toString());
+            System.out.println(squirtle.toString());
+            System.out.println(ninetails.toString());
             
 	// ***** closing message *****
 	

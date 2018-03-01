@@ -48,13 +48,13 @@ package pokemon;
 	 public fireType(Gender g, int ls, String n, Rarity r, originalMoves m, 
                  Type t, hiddenAbilities ha, fireMoves fm){
 		 
-             super(g, ls, n, r, m, t, ha);
-             fMoves = fm;
+             super(g, ls, n, r, m, t, ha); //extends object creation of pokemon
+             fMoves = fm; //set variable for fire moves
              
 	 } // and initialized constructor
          
 /*****************************************************
- Purpose: create a new fire type object
+ Purpose: create a new fire type object with default constructors
  Interface: IN: na
 							
  Returns: na
@@ -65,12 +65,15 @@ package pokemon;
             
  	// ********** accessors **********
         
-        public fireMoves getfMoves() {
+        public fireMoves getfMoves() { //get fire moves
             return fMoves;
-        }
+        } //end getfMoves
  
          
  	// ********** mutators **********
 
+        public void setfMoves(fireMoves fMoves) { //set fire moves
+            this.fMoves = fMoves;
+        } //end setfMoves
     
  }  // end class

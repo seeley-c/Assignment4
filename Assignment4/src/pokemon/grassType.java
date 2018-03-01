@@ -33,7 +33,7 @@ package pokemon;
  	// ********** constructors ***********
  	
 /*****************************************************
- Purpose: create a new animal object
+ Purpose: create a new grass type object with initialized constructors
  Interface: IN: lifeSpan ls: int
  *              rarity r: Rarity
  *              gender g: Gender

@@ -158,6 +158,10 @@ package pokemon;
             this.hAbilities = hAbilities;
         } //end setHAbilities
 
+        public void setId(int id) { //set ID
+            this.id = id;
+        }//end setId
+
         
 
     
