@@ -21,8 +21,17 @@ import pokemon.pokemon.originalMoves;
 import pokemon.pokemon.Type;
 import javax.swing.*;
 import java.text.DecimalFormat;
+import pokemon.Ninetails;
+import pokemon.Ninetails.ninetailsMoves;
 import pokemon.fireType;
 import pokemon.fireType.fireMoves;
+import pokemon.grassType;
+import pokemon.grassType.grassMoves;
+import pokemon.pokemon.hiddenAbilities;
+import pokemon.sceptile;
+import pokemon.sceptile.sceptileMoves;
+import pokemon.squirtle;
+import pokemon.squirtle.squirtleMoves;
 import pokemon.waterType;
 import pokemon.waterType.waterMoves;
 
@@ -36,14 +45,19 @@ public class pokemonClient
 	
 	// ***** create objects *****
 		
-            pokemon pokeman = new pokemon(Gender.Male, 20, "Pokeman", 
-                    Rarity.Common, originalMoves.Pound, Type.Grass);
-            fireType bob = new fireType(Gender.Male, 45, "Bob", 
+            sceptile sceptile = new sceptile(Gender.Male, 45, "Sceptile", 
                     Rarity.Legendary, originalMoves.Scratch, Type.Fire, 
-                    fireMoves.Scorch);
-            waterType joe = new waterType(Gender.Male, 23, "Joe", 
+                    hiddenAbilities.Unburden, grassMoves.Spore, 
+                    sceptileMoves.LeafStorm);
+            squirtle squirtle = new squirtle(Gender.Male, 56, "Squirtle", 
                     Rarity.Rare, originalMoves.Pound, Type.Water, 
-                    waterMoves.WaterShuriken);
+                    hiddenAbilities.RainDish, waterMoves.WaterShuriken, 
+                    squirtleMoves.HydroBlast);
+            Ninetails ninetails = new Ninetails(Gender.Male, 1234, "Ninetails", 
+                    Rarity.Legendary, originalMoves.Pound, Type.Fire, 
+                    hiddenAbilities.Drought, fireMoves.InfernoOverdrive, 
+                    ninetailsMoves.FlameCharge);
+            
             
 	// ***** create input stream *****
 	
@@ -59,35 +73,47 @@ public class pokemonClient
 	
 	// ***** processing *****
 	
-            System.out.println(pokeman.getGender());
-            System.out.println(pokeman.getLifeSpan());
-            System.out.println(pokeman.getName());
-            System.out.println(pokeman.getOgMoves());
-            System.out.println(pokeman.getRarity());
-            System.out.println(pokeman.getType());
-            System.out.println(pokeman.getId() + "\n");
-            System.out.println(bob.getGender());
-            System.out.println(bob.getLifeSpan());
-            System.out.println(bob.getName());
-            System.out.println(bob.getOgMoves());
-            System.out.println(bob.getRarity());
-            System.out.println(bob.getType());
-            System.out.println(bob.getfMoves());
-            System.out.println(bob.getId() + "\n");
+            
+		
+	// ***** output *****
+	
+            joe.setGender(Gender.Female);
+            joe.setName("Josephine");
+            joe.setRarity(Rarity.Common);
+            
+            System.out.println("Name: " + bob.getName());
+            System.out.println("Gender: " + bob.getGender());
+            System.out.println("Life Span: " + bob.getLifeSpan());
+            System.out.println("Rarity: " + bob.getRarity());
+            System.out.println("Pokemon Type: " + bob.getType());
+            System.out.println("Original Moves: " + bob.getOgMoves());
+            System.out.println("Grass Moves: " + bob.getgMoves());
+            System.out.println("Sceptile Moves: " + bob.getsceptileMoves());
+            System.out.println("Hidden Ability: " + bob.getHAbilities());
+            System.out.println("Pokemon ID: " + bob.getId() + "\n");
             
             System.out.println("Gender: " + joe.getGender());
             System.out.println("Life Span: " + joe.getLifeSpan());
             System.out.println("Name: " + joe.getName());
-            System.out.println("Original Moves: " + joe.getOgMoves());
             System.out.println("Rarity: " + joe.getRarity());
             System.out.println("Pokemon Type: " + joe.getType());
+            System.out.println("Original Moves: " + joe.getOgMoves());
             System.out.println("Water Moves: " + joe.getwMoves());
+            System.out.println("Squirtle Moves: " + joe.getsMoves());
+            System.out.println("Hidden Ability: " + joe.getHAbilities());
             System.out.println("Pokemon ID: " + joe.getId() + "\n");
-		
-	// ***** output *****
-	
-		
-
+            
+            System.out.println("Gender: " + Sminem.getGender());
+            System.out.println("Life Span: " + Sminem.getLifeSpan());
+            System.out.println("Name: " + Sminem.getName());
+            System.out.println("Rarity: " + Sminem.getRarity());
+            System.out.println("Pokemon Type: " + Sminem.getType());
+            System.out.println("Original Moves: " + Sminem.getOgMoves());
+            System.out.println("Fire Moves: " + Sminem.getfMoves());
+            System.out.println("Ninetails Moves: " + Sminem.getntMoves());
+            System.out.println("Hidden Ability: " + Sminem.getHAbilities());
+            System.out.println("Pokemon ID: " + Sminem.getId() + "\n");
+            
 	// ***** closing message *****
 	
 		System.out.println("end of processing");

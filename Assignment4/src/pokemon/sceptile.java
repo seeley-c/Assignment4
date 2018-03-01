@@ -6,9 +6,8 @@ package pokemon;
  * 
  * Assignment:	Assignment 4
  *
- * Description:	Water type derived class. this is one of three
- *              derived classes. all water type classes will 
- *              derive form this one
+ * Description:	Sceptile derived class. this is one of the derived classes
+ *				of grass type
  *
  * 
  * *************************************************************
@@ -17,64 +16,60 @@ package pokemon;
  // import files here as needed
  
  
- public class waterType extends pokemon
+ public class sceptile extends grassType
  {  // begin class
  	
-            public enum waterMoves {    //water based moves
-                WaterShuriken, AquaJet, Vortex, HydroPump;
-            } 
+            public enum sceptileMoves {
+                LeafBlade, LeafStorm;
+            }
             
  	// *********** class constants **********
             
  	// ********** instance variable **********
             
-            waterMoves wMoves = null; //variable for water moves
+            sceptileMoves sMoves = null;
             
  	// ********** constructors ***********
  	
 /*****************************************************
- Purpose: create a new water type object with initialized constructors
+ Purpose: create a new sceptile object
  Interface: IN: lifeSpan ls: int
  *              rarity r: Rarity
  *              gender g: Gender
  *              name n: String
  *              ogMoves m: originalMoves
  *              type t: Type
- *              hAbilities ha: hiddenAbilities
- *              wMoves wm: waterMoves
+ *              gMoves gm: grassMoves
+ *              sMoves sm; sceptileMoves
 							
  Returns: na
  *****************************************************/
-	 public waterType(Gender g, int ls, String n, Rarity r, originalMoves m, 
-                 Type t, hiddenAbilities ha, waterMoves wm){
+	 public sceptile(Gender g, int ls, String n, Rarity r, originalMoves m, 
+                 Type t, hiddenAbilities ha, grassMoves gm, sceptileMoves sm){
 		 
-             super(g, ls, n, r, m, t, ha); //extend original pokemon object creation
-             wMoves = wm; //set new variable for water based move
+             super(g, ls, n, r, m, t, ha, gm);
+             sMoves = sm;
              
 	 } // and initialized constructor
          
 /*****************************************************
- Purpose: create a new water type object with default constructors
+ Purpose: create a new sceptile object
  Interface: IN: na
 							
  Returns: na
  *****************************************************/
-	 public waterType(){
+	 public sceptile(){
              
 	 } // and initialized constructor
             
  	// ********** accessors **********
         
-        public waterMoves getwMoves() { //getter for water moves
-            return wMoves;
-        } //end getwMoves
+        public sceptileMoves getsceptileMoves() {
+            return sMoves;
+        }
  
          
  	// ********** mutators **********
-
-        public void setwMoves(waterMoves wMoves) { //set water moves
-            this.wMoves = wMoves;
-        } //end setwMoves
 
     
  }  // end class

@@ -6,8 +6,9 @@ package pokemon;
  * 
  * Assignment:	Assignment 4
  *
- * Description:	Squirtle derived class. this is one of the derived classes
- *		of water type
+ * Description:	ninetails derived class. this is a
+ *              fire type derived class
+ *				
  *
  * 
  * *************************************************************
@@ -16,57 +17,58 @@ package pokemon;
  // import files here as needed
  
  
- public class squirtle extends waterType
+ public class Ninetails extends fireType
  {  // begin class
  	
-            public enum squirtleMoves {
-                Shell, HydroBlast;
+            public enum ninetailsMoves {
+                Flamethrower, FlameCharge;
             }
-     
+            
  	// *********** class constants **********
             
  	// ********** instance variable **********
             
-            squirtleMoves sMoves = null;
+            ninetailsMoves ntMoves = null;
             
  	// ********** constructors ***********
  	
 /*****************************************************
- Purpose: create a new squirtle object
+ Purpose: create a new ninetails object
  Interface: IN: lifeSpan ls: int
  *              rarity r: Rarity
  *              gender g: Gender
  *              name n: String
  *              ogMoves m: originalMoves
  *              type t: Type
- *              wMoves wm: waterMoves
+ *              fMoves fm: fireMoves
+ *              ntMoves nm: ninetailsMoves
 							
  Returns: na
  *****************************************************/
-	 public squirtle(Gender g, int ls, String n, Rarity r, originalMoves m, 
-                 Type t, hiddenAbilities ha, waterMoves wm, squirtleMoves sm){
+	 public Ninetails(Gender g, int ls, String n, Rarity r, originalMoves m, 
+                 Type t, hiddenAbilities ha, fireMoves fm, ninetailsMoves nm){
 		 
-             super(g, ls, n, r, m, t, ha, wm);
-             wMoves = wm;
-             sMoves = sm;
+             super(g, ls, n, r, m, t, ha, fm);
+             ntMoves = nm;
              
 	 } // and initialized constructor
          
 /*****************************************************
- Purpose: create a new squirtle object
+ Purpose: create a new ninetails object
  Interface: IN: na
 							
  Returns: na
  *****************************************************/
-	 public squirtle(){
+	 public Ninetails(){
              
-	 } // and initialized constructor
+	 } // end initialized constructor
             
  	// ********** accessors **********
- 
-         public squirtleMoves getsMoves() {
-            return sMoves;
+        
+        public ninetailsMoves getntMoves() {
+            return ntMoves;
         }
+ 
          
  	// ********** mutators **********
 
